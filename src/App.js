@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
 import {Provider as MyProvider} from "./providers/Provider";
+import List from './components/Simplelister'
+import Buttons from './components/Simplesetter'
 
 function App() {
   return (
     <div className="App">
       <MyProvider>
-        <h1>Something</h1>
-        <p>else</p>
+        <List />
+        <Buttons />
       </MyProvider>
     </div>
   );
