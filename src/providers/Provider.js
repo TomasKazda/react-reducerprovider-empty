@@ -4,6 +4,7 @@ const LOCAL_STORAGE_ID = "mystorageidsCnt2E0A";
 
 export const CLEAR = "CLEAR";
 export const RESET = "RESET";
+export const SETDATA1 = "SD1";
 
 const copyMultidimensionalArray = arr => JSON.parse(JSON.stringify(arr));
 
@@ -19,6 +20,9 @@ const dataReducer = (state, action) => {
         }
         case RESET: {
             return  initialState;
+        }
+        case SETDATA1: {
+            return {...state, data1: action.payload}
         }
         default: {
             return state;
